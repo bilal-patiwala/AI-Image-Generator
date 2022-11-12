@@ -1,4 +1,4 @@
-#Image of AI-Image-Generator React App 
+# Image of AI-Image-Generator React App 
 
 ![alt text](./public/AI-Image_generator-SnapShot.jpg)
 
