@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+const App = () => {
 
-function App() {
+  let [search, setSearch] = useState("")
+  let[query, setQuery] = useState("")
+  
+  let searchHandler = (event) => {
+    setSearch(event.target.value)
+  }
+
+  let generateImage = (event) =>{
+    event.preventDefault()
+    setQuery(search)
+    setSearch("")
+  }
+
+  useEffect(() => {
+    console.log(query);
+  },[query])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container'>
+        <div className='header'>
+          <p className='app-title'> AI-Image-Generator </p>
+          <div className='image-generating-form'>
+            <input type="search" className='search-bar' placeholder='example: a bowl of soup that is also a portal to another dimension, digital art' onChange={searchHandler}/>
+            <button type='submit' className='generate-btn' onClick={generateImage}>Generate Image</button>
+          </div>
+        </div>
+
+        <div className='image-container'>
+          <img src={require('../src/assets/nature1.jpg')} className="image"/>
+          <img src={require('../src/assets/nature1.jpg')} className="image"/>
+        </div>
+      </div>
     </div>
   );
 }
