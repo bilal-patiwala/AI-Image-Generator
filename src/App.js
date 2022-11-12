@@ -33,6 +33,7 @@ const App = () => {
         <div className='image-container'>
           <img src={require('../src/assets/nature1.jpg')} className="image"/>
           <img src={require('../src/assets/nature1.jpg')} className="image"/>
+          <img src={require('../src/assets/nature1.jpg')} className="image"/>
         </div>
       </div>
     </div>
