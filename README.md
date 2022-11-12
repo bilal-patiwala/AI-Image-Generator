@@ -1,3 +1,8 @@
+#Image of AI-Image-Generator React App 
+
+![alt text](./public/AI-Image_generator-SnapShot.jpg)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
